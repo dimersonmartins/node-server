@@ -1,6 +1,13 @@
 const express = require('express');
-const router = router();
+const routes = express.Router();
 
-router.get('/', (req, res) => {
-    return res.send(`Hello ${req.query.name}`);
+routes.get('/', (req, res) => {
+    return res.send('adsad');
 });
+
+
+routes.post('/devs', (req, res) =>{
+    return res.json(req.body);
+});
+
+module.exports = routes;
